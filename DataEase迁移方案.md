@@ -52,7 +52,12 @@ mybatis-plus:
   mapper-locations: classpath:mybatis/*.xml
 ```
 ### 启动
-启动类： `io.dataease.CoreApplication`
+jdk： 21  
+启动类： `io.dataease.CoreApplication`  
+命令行启动, 需要指定各个数据库的驱动包目录`drivers`
+```shell
+java -Dloader.path=./drivers -jar ./CoreApplication.jar
+```
 
 
 ## 前端
