@@ -115,3 +115,6 @@ mvn clean package -Dmaven.test.skip=true
 ```
 #### 方式二
 在idea的maven面板中直接点package打包
+
+### 访问地址
+前端文件打入jar包访问地址：`http://192.168.2.202:8100/`
