@@ -136,8 +136,8 @@ git remote add origin https://codeup.aliyun.com/632c1b15257dab51ddaa571c/e00/dat
 idea中设置远程地址： 菜单栏`Git` -> `Remote`，在弹出窗中直接添加上面两个远程地址
 
 ### 升级数据库
-系统功能升级时，在上线钱可能需要执行一段SQL脚本用于建表或初始化一些数据，可以将这些SQL脚本放在`core/core-backend/src/main/resources/db/migration`目录下，
-脚本的名称需要遵循版本好的规律。在新版本项目启动时，会自动执行这些SQL脚本，完成数据库升级。  
+系统功能升级时，在上线前可能需要执行一段SQL脚本用于建表或初始化一些数据，可以将这些SQL脚本放在`core/core-backend/src/main/resources/db/migration`目录下，
+脚本的名称需要遵循版本号的规律。在新版本项目启动时，会自动执行这些SQL脚本，完成数据库升级。  
 SQL文件名称命名规则：`V${version}__ddl.sql`，如： `V2.10.19__ddl.sql`  
 修改版本号只需要修改项目更目录下的`pom.xml`文件中的`<dataease.version>`标签即可；如`<dataease.version>2.10.19</dataease.version>`
 
