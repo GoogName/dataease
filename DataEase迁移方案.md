@@ -116,6 +116,15 @@ mvn clean package -Dmaven.test.skip=true
 
 #### 访问地址
 前端文件打入jar包访问地址：`http://192.168.2.202:8100/`
+默认账号名密码：`admin`/`DataEase@123456`
+
+### 其他配置
+#### 修改admin的默认密码
+在`application.yml`中添加如下内容
+```shell
+dataease:
+  default-pwd: DataEase@123456
+```
 
 
 ## 版本升级
