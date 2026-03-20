@@ -87,6 +87,16 @@ end_of_line: lf
 
 
 ### 打包
+#### 一体化打包
+在项目根目录下执行打包命令，需要提前在系统中配置号maven的环境变量。执行命令后maven会执行以下几个步骤：  
+1. 下载nodejs
+2. 执行`npm install`
+3. 执行`npm run build:distributed`；windows打包可修改`core/core-frontend/pom.xml`中的命令为`build:distributed:win`
+4. 将前端打包好的文件复制到`core/core-backend/src/main/resources/static`目录下
+5. 执行后端jar包构建
+```shell
+mvn clean package -Dmaven.test.skip=true
+```
 #### 前端打包
 ##### 添加windows打包命令
 编辑`core/core-frontend/package.json`文件，添加如下内容
@@ -107,7 +117,7 @@ npm run build:distributed
 
 #### 后端打包
 ##### 方式一
-在项目根目录下执行打包命令，需要提前在系统中配置号maven的环境变量
+在项目`core/core-backend`目录下执行打包命令，需要提前在系统中配置号maven的环境变量
 ```shell
 mvn clean package -Dmaven.test.skip=true
 ```
